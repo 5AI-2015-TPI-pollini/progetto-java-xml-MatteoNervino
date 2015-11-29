@@ -5,18 +5,18 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class URLCreator {
+public class GMapsURLCreator {
     
     private final String URL_ADDRESS = "https://maps.googleapis.com/maps/api/geocode/";
     private final String DOCUMENT_TYPE = "xml";
     private URL URL;
     
-    public URLCreator (Location location) {
+    public GMapsURLCreator (String location) {
         StringBuilder URLBuilder = new StringBuilder(URL_ADDRESS);
         URLBuilder.append(DOCUMENT_TYPE);
         URLBuilder.append("?address=");
         try {
-            URLBuilder.append(URLEncoder.encode(location.getAddress(), "UTF-8"));
+            URLBuilder.append(URLEncoder.encode(location, "UTF-8"));
         } catch (UnsupportedEncodingException ex) {
             System.out.println("ERROR: Impossible append location\n");
         }

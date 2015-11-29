@@ -2,27 +2,27 @@ package myweather;
 
 public class Coordinates {
     
-    private double longitude;
-    private double latitude;
+    private String longitude;
+    private String latitude;
     
-    public Coordinates (double latitude, double longitude) {
+    public Coordinates (String latitude, String longitude) {
         this.longitude = longitude;
         this.latitude = latitude;
     }
     
-    public void setLatitude(double latitude) {
+    public void setLatitude(String latitude) {
         this.latitude = latitude;
     }
     
-    public void setLongitude(double longitude) {
+    public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
     
-    public double getLatitude() {
+    public String getLatitude() {
         return latitude;
     }
     
-    public double getLongitude() {
+    public String getLongitude() {
        return longitude;
     }
 }

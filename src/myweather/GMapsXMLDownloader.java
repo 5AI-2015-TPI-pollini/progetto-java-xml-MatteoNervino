@@ -12,15 +12,16 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
-public class XMLDownloader {
+public class GMapsXMLDownloader {
     
     private org.w3c.dom.Document XML;
     private URL address;
     
-    public XMLDownloader(URLCreator URL) throws  SAXException, ParserConfigurationException {
+    public GMapsXMLDownloader(GMapsURLCreator URL) throws  SAXException, ParserConfigurationException {
         
         address = URL.getURL();
         
@@ -38,5 +39,9 @@ public class XMLDownloader {
         TransformerFactory factory2 = TransformerFactory.newInstance();
         Transformer xform = factory2.newTransformer();
         xform.transform(new DOMSource((Node) XML), new StreamResult(System.out));        
+    }
+    
+    public Document getXML(){
+        return XML;
     }
 }
