@@ -13,7 +13,8 @@ public class URLCreator {
     
     public URLCreator (Location location) {
         StringBuilder URLBuilder = new StringBuilder(URL_ADDRESS);
-        URLBuilder.append(DOCUMENT_TYPE+"?address=");
+        URLBuilder.append(DOCUMENT_TYPE);
+        URLBuilder.append("?address=");
         try {
             URLBuilder.append(URLEncoder.encode(location.getAddress(), "UTF-8"));
         } catch (UnsupportedEncodingException ex) {
@@ -22,6 +23,7 @@ public class URLCreator {
         
         try {
             URL = new URL(URLBuilder.toString());
+            System.out.println(URLBuilder.toString());
         } catch (MalformedURLException ex) {
             System.out.println("ERROR: Impossible create URL");
         }
