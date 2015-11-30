@@ -1,5 +1,6 @@
-package myweather;
+package GMaps;
 
+import GMaps.GMapsURLCreator;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.Proxy;

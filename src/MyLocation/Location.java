@@ -1,4 +1,6 @@
-package myweather;
+package MyLocation;
+
+import MyLocation.Coordinates;
 
 public class Location {
     

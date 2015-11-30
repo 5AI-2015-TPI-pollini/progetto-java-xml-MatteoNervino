@@ -1,4 +1,4 @@
-package myweather;
+package MyLocation;
 
 public class Coordinates {
     

@@ -1,5 +1,7 @@
-package myweather;
+package GMaps;
 
+import MyLocation.Location;
+import MyLocation.Coordinates;
 import com.sun.org.apache.xml.internal.security.utils.XPathFactory;
 import java.util.ArrayList;
 import java.util.logging.Level;

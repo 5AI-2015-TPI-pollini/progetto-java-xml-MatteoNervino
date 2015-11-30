@@ -1,5 +1,9 @@
-package myweather;
+package MyWheater;
 
+import GMaps.GMapsXPath;
+import GMaps.GMapsXMLDownloader;
+import GMaps.GMapsURLCreator;
+import MyLocation.Location;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

@@ -1,4 +1,4 @@
-package myweather;
+package GMaps;
 
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
