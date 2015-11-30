@@ -35,12 +35,10 @@ public class GMapsXPath {
             javax.xml.xpath.XPathExpression longitude = xpath.compile(GET_LONGITUDE);
             
             //Execute XPath requests
-            NodeList addresses = (NodeList) address.evaluate(XML, XPathConstants.NODE);
+            NodeList addresses = (NodeList) address.evaluate(XML, XPathConstants.NODESET);
             NodeList latitudes = (NodeList) latitude.evaluate(XML, XPathConstants.NODESET);
             NodeList longitudes = (NodeList) longitude.evaluate(XML, XPathConstants.NODESET);
             
-            System.out.println(addresses);
-            System.out.println(addresses.getLength());
             for(int i=0;i<addresses.getLength();i++){
                 Coordinates coordinate = new Coordinates(latitudes.item(i).getNodeValue(), longitudes.item(i).getNodeValue());
                 locations.add(new Location(addresses.item(i).getNodeValue(), coordinate));
