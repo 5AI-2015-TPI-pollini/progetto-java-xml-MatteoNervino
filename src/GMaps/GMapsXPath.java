@@ -2,16 +2,12 @@ package GMaps;
 
 import MyLocation.Location;
 import MyLocation.Coordinates;
-import com.sun.org.apache.xml.internal.security.utils.XPathFactory;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
-import org.w3c.dom.xpath.XPathExpression;
 
 public class GMapsXPath {
     
