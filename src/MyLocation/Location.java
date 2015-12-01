@@ -1,12 +1,10 @@
 package MyLocation;
 
-import MyLocation.Coordinates;
-
 public class Location {
     
     private String address;
     private Coordinates coordinates;
-    private Wheather wheather;
+    private Weather weather;
     
     public Location(String address,Coordinates coordinates){
         this.address = address;
@@ -23,6 +21,10 @@ public class Location {
     
     public String getAddress() {
         return address;
+    }
+    
+    public Weather getWeather() {
+        return weather;
     }
     
     @Override

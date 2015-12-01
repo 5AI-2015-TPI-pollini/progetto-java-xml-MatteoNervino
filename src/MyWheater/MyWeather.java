@@ -1,9 +1,10 @@
 package MyWheater;
 
 import GMaps.GMapsXPath;
-import GMaps.GMapsXMLDownloader;
+import Utilities.XMLDownloader;
 import GMaps.GMapsURLCreator;
 import MyLocation.Location;
+import OpenWeather.OpenWeatherURLCreator;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -21,11 +22,14 @@ public class MyWeather {
         String input = reader.readLine();
         
         GMapsURLCreator url = new GMapsURLCreator(input);
-        GMapsXMLDownloader XML = new GMapsXMLDownloader(url);
+        XMLDownloader XML = new XMLDownloader(url.getURL());
         ArrayList<Location> locations = new ArrayList();
         GMapsXPath xpath = new GMapsXPath(XML.getXML());
         locations = xpath.getLocations();
         System.out.println(locations);
+        OpenWeatherURLCreator weather = new OpenWeatherURLCreator(locations.get(0).getCoordinates(),1);
+        XMLDownloader XMfgL = new XMLDownloader(weather.getURL());
+        XMfgL.printXML();
     }
     
 }
