@@ -2,22 +2,18 @@ package MyLocation;
 
 public class Weather {
     
-    private String temperature, tempMin, tempMax;
-    private String Pressure;
-    private String date;
+    private String temperature;
+    private String pressure;
     private String icon;
-    private String Humidity;
-    private String Description;
+    private String humidity;
+    private String description;
 
-    public Weather(String temperature, String tempMin, String tempMax, String Pressure, String date, String icon, String Humidity, String Description) {
+    public Weather(String temperature, String pressure, String icon, String humidity, String description) {
         this.temperature = temperature;
-        this.tempMin = tempMin;
-        this.tempMax = tempMax;
-        this.Pressure = Pressure;
-        this.date = date;
+        this.pressure = pressure;
         this.icon = icon;
-        this.Humidity = Humidity;
-        this.Description = Description;
+        this.humidity = humidity;
+        this.description = description;
     }
 
     public String getTemperature() {
@@ -28,36 +24,12 @@ public class Weather {
         this.temperature = temperature;
     }
 
-    public String getTempMin() {
-        return tempMin;
-    }
-
-    public void setTempMin(String tempMin) {
-        this.tempMin = tempMin;
-    }
-
-    public String getTempMax() {
-        return tempMax;
-    }
-
-    public void setTempMax(String tempMax) {
-        this.tempMax = tempMax;
-    }
-
     public String getPressure() {
-        return Pressure;
+        return pressure;
     }
 
     public void setPressure(String Pressure) {
-        this.Pressure = Pressure;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
+        this.pressure = Pressure;
     }
 
     public String getIcon() {
@@ -69,19 +41,26 @@ public class Weather {
     }
 
     public String getHumidity() {
-        return Humidity;
+        return humidity;
     }
 
     public void setHumidity(String Humidity) {
-        this.Humidity = Humidity;
+        this.humidity = Humidity;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String Description) {
-        this.Description = Description;
+        this.description = Description;
     }
     
+    @Override
+    public String toString(){
+        return  "Temperature: " + temperature +
+                "\nPressure: " + pressure +
+                "\nHumidity: " + humidity +
+                "\nWeather condition: " + description;
+    }
 }
