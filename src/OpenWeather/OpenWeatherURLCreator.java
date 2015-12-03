@@ -10,6 +10,10 @@ import MyLocation.Coordinates;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+/**
+ *
+ * @author Matteo Nervino
+ */
 public class OpenWeatherURLCreator {
     
     private final String URL_ADDRESS = "http://api.openweathermap.org/data/2.5/weather?";
@@ -46,6 +50,10 @@ public class OpenWeatherURLCreator {
         }    
     }
     
+    /**
+     *
+     * @return
+     */
     public URL getURL(){
         return URL;
     }       

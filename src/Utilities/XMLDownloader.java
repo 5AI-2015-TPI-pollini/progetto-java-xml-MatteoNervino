@@ -19,6 +19,10 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
+/**
+ *
+ * @author Matteo Nervino
+ */
 public class XMLDownloader {
     
     private org.w3c.dom.Document XML;
@@ -41,12 +45,20 @@ public class XMLDownloader {
         }
     }
     
+    /**
+     *
+     * @throws TransformerException
+     */
     public void printXML() throws TransformerException {
         TransformerFactory factory2 = TransformerFactory.newInstance();
         Transformer xform = factory2.newTransformer();
         xform.transform(new DOMSource((Node) XML), new StreamResult(System.out));        
     }
     
+    /**
+     *
+     * @return
+     */
     public Document getXML(){
         return XML;
     }

@@ -33,11 +33,17 @@ public class GUI extends javax.swing.JFrame {
     private OpenWeatherURLCreator openWeatherURL;
     private OpenWeatherXPath openWeatherXPath;
 
+    /**
+     *
+     */
     public GUI() {
         initComponents();
         start();
     }
     
+    /**
+     *
+     */
     public void start(){
         new Thread(new Runnable(){
         @Override

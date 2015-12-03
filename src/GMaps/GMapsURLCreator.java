@@ -11,6 +11,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
+/**
+ *
+ * @author Matteo Nervino
+ */
 public class GMapsURLCreator {
 
     private final String URL_ADDRESS = "https://maps.googleapis.com/maps/api/geocode/";
@@ -41,6 +45,10 @@ public class GMapsURLCreator {
         }
     }
     
+    /**
+     *
+     * @return
+     */
     public URL getURL(){
         return URL;
     }

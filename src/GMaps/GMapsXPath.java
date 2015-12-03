@@ -13,6 +13,10 @@ import javax.xml.xpath.XPathExpressionException;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
+/**
+ *
+ * @author Matteo Nervino
+ */
 public class GMapsXPath {
     
     private static final javax.xml.xpath.XPathFactory xpathFactory = javax.xml.xpath.XPathFactory.newInstance();
@@ -24,6 +28,10 @@ public class GMapsXPath {
     private final String GET_LATITUDE = "/GeocodeResponse/result/geometry/location/lat/text()";
     private final String GET_LONGITUDE = "/GeocodeResponse/result/geometry/location/lng/text()";
     
+    /**
+     *
+     * @param importedXML
+     */
     public GMapsXPath(Document importedXML){
         
         XML = importedXML; 
@@ -53,6 +61,10 @@ public class GMapsXPath {
         }   
     }
     
+    /**
+     *
+     * @return
+     */
     public ArrayList<Location> getLocations(){
         return locations;
     }

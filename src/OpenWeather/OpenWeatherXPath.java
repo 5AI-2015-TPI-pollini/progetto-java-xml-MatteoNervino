@@ -13,6 +13,10 @@ import javax.xml.xpath.XPathExpressionException;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
+/**
+ *
+ * @author Matteo Nervino
+ */
 public class OpenWeatherXPath {
     
     private static final javax.xml.xpath.XPathFactory xpathFactory = javax.xml.xpath.XPathFactory.newInstance();
@@ -29,6 +33,10 @@ public class OpenWeatherXPath {
     private final String GET_WEATHER = "/current/weather/@value";
     private final String GET_ICON = "/current/weather/@icon";
     
+    /**
+     *
+     * @param importedXML
+     */
     public OpenWeatherXPath(Document importedXML){
         
         XML = importedXML; 
@@ -70,6 +78,10 @@ public class OpenWeatherXPath {
         }
     }
     
+    /**
+     *
+     * @return
+     */
     public Weather getWeather() {
             return weather;
         }
