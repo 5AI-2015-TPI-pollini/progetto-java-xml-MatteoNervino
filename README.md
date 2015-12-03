@@ -1,7 +1,7 @@
 <h1 align="center">MyWeather</h1>
 <p align="justify">MyWeather is an application that can tell you right away what is the weather like in each city, street or point of interest.</p>
 <br>
-<div align="center"><img src="http://icons.iconarchive.com/icons/studiomx/leomx/256/Web-icon.png" height="48" width="48"/></div>
+<div align="center"><a href="http://matteonervino.github.io/MyWeather"><img src="http://icons.iconarchive.com/icons/studiomx/leomx/256/Web-icon.png" height="48" width="48"/></a></div>
 <h6 align="center">Go to the officail site</h6>
 <br>
 <div align="center">
