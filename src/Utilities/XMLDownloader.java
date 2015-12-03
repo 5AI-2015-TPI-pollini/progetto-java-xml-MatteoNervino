@@ -6,6 +6,8 @@ package Utilities;
  * @author Nervino Matteo
  */
 import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.net.Proxy;
 import java.net.URL;
 import java.net.URLConnection;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -36,7 +38,8 @@ public class XMLDownloader {
     public XMLDownloader(URL URL) throws  SAXException, ParserConfigurationException {
         
         
-        try {       
+        try {
+            //Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("192.168.0.1", 8080));
             DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
             URLConnection connection = URL.openConnection();
             XML = builderFactory.newDocumentBuilder().parse(connection.getInputStream());     
