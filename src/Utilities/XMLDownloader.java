@@ -1,9 +1,11 @@
 package Utilities;
 
-import GMaps.GMapsURLCreator;
+/**
+ * Class used for download a XML file
+ * 
+ * @author Nervino Matteo
+ */
 import java.io.IOException;
-import java.net.InetSocketAddress;
-import java.net.Proxy;
 import java.net.URL;
 import java.net.URLConnection;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -21,6 +23,12 @@ public class XMLDownloader {
     
     private org.w3c.dom.Document XML;
     
+    /**
+     * This methods download a XML from the URL gived as parameter
+     * @param URL
+     * @throws SAXException
+     * @throws ParserConfigurationException 
+     */
     public XMLDownloader(URL URL) throws  SAXException, ParserConfigurationException {
         
         

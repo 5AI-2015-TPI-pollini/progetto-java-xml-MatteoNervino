@@ -1,5 +1,8 @@
 package MyLocation;
-
+/**
+ * Class that contains the weather information about one location
+ * @author Matteo Nervino
+ */
 public class Weather {
     
     private String temperature;

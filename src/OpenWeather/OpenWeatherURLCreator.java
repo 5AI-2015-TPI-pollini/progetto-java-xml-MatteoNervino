@@ -1,5 +1,11 @@
 package OpenWeather;
 
+/**
+ * Class used for creat the URL where download the XML OpenWeather file
+ * 
+ * @author Nervino Matteo
+ */
+
 import MyLocation.Coordinates;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -12,7 +18,12 @@ public class OpenWeatherURLCreator {
     private final String IMPERIAL_UNIT = "&units=imperial";
     private final String OPEN_WEATHER_ID = "&appid=2de143494c0b295cca9337e1e96b00e0";
     private URL URL;
-    
+
+    /**
+     * @author Nervino Matteo
+     * @param coordinates
+     * @param metricType (1 = Celsius, 2 = Fahrenheit)
+     */
     public OpenWeatherURLCreator (Coordinates coordinates, int metricType) {
         
         String latitude = "lat="+coordinates.getLatitude();

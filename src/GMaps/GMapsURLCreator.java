@@ -1,16 +1,28 @@
 package GMaps;
 
+/**
+ * Class used for creat the URL where download the XML Geocoding file
+ * 
+ * @author Nervino Matteo
+ */
+
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
 public class GMapsURLCreator {
-    
+
     private final String URL_ADDRESS = "https://maps.googleapis.com/maps/api/geocode/";
     private final String DOCUMENT_TYPE = "xml";
     private URL URL;
     
+    /**
+     * Gived a String with the location it creats the URL
+     * 
+     * @author Nervino Matteo
+     * @param location 
+     */
     public GMapsURLCreator (String location) {
         StringBuilder URLBuilder = new StringBuilder(URL_ADDRESS);
         URLBuilder.append(DOCUMENT_TYPE);

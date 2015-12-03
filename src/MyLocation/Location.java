@@ -1,5 +1,9 @@
 package MyLocation;
 
+/**
+ * Class that contains the geographical information about one location
+ * @author Matteo Nervino
+ */
 public class Location {
     
     private String address;

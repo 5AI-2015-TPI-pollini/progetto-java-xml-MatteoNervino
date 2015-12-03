@@ -1,5 +1,9 @@
 package OpenWeather;
 
+/**
+ * Class used to extrapolates the information in a XML file
+ * @author Nervino Matteo
+ */
 import MyLocation.Coordinates;
 import MyLocation.Location;
 import MyLocation.Weather;

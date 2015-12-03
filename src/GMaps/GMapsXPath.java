@@ -1,5 +1,9 @@
 package GMaps;
 
+/**
+ * Class used to extrapolates the information in a XML file
+ * @author Nervino Matteo
+ */
 import MyLocation.Location;
 import MyLocation.Coordinates;
 import java.util.ArrayList;

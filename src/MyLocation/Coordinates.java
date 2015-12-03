@@ -1,5 +1,8 @@
 package MyLocation;
-
+/**
+ * Class used to save the latitude and longitude
+ * @author Matteo Nervino
+ */
 public class Coordinates {
     
     private String longitude;
