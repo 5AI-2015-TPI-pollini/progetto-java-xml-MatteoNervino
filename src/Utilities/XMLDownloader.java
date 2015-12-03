@@ -35,16 +35,20 @@ public class XMLDownloader {
      * @throws SAXException
      * @throws ParserConfigurationException 
      */
-    public XMLDownloader(URL URL) throws  SAXException, ParserConfigurationException {
+    public XMLDownloader(URL URL) throws  SAXException, ParserConfigurationException, IOException {
         
         
         try {
-            //Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("192.168.0.1", 8080));
+            Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("192.168.0.1", 8080));
             DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
             URLConnection connection = URL.openConnection();
             XML = builderFactory.newDocumentBuilder().parse(connection.getInputStream());     
         } catch (IOException ex) {
             System.out.println("ERROR: cannot connect to Proxy");
+            Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("192.168.0.1", 8080));
+            DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
+            URLConnection connection = URL.openConnection(proxy);
+            XML = builderFactory.newDocumentBuilder().parse(connection.getInputStream()); 
         }
     }
     
