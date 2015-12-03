@@ -29,7 +29,7 @@ public class Location {
     
     @Override
     public String toString(){
-        return "Address: "+address+"\nLatitude: "+coordinates.getLatitude()+"\nLongitude: "+coordinates.getLongitude();
+        return address;
         
     }
     

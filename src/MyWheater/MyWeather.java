@@ -1,23 +1,20 @@
 package MyWheater;
 
-import GMaps.GMapsXPath;
-import Utilities.XMLDownloader;
-import GMaps.GMapsURLCreator;
-import MyLocation.Location;
-import OpenWeather.OpenWeatherURLCreator;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
-import org.xml.sax.SAXException;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
 public class MyWeather {
 
-    public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException, TransformerException {
+    public static void main(String[] args) {
         
-        System.out.println("Inserisci luogo: ");
+        
+        /*
+        System.out.print("Insert the location: ");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String input = reader.readLine();
         
@@ -29,7 +26,8 @@ public class MyWeather {
         System.out.println(locations);
         OpenWeatherURLCreator weather = new OpenWeatherURLCreator(locations.get(0).getCoordinates(),1);
         XMLDownloader XMfgL = new XMLDownloader(weather.getURL());
-        XMfgL.printXML();
+        OpenWeatherXPath xpWeather = new OpenWeatherXPath(XMfgL.getXML());
+        System.out.println(xpWeather.getWeather());*/
     }
     
 }

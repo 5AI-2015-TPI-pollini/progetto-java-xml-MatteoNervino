@@ -58,8 +58,6 @@ public class OpenWeatherXPath {
             String conditionN = (String) condition.evaluate(XML, XPathConstants.STRING);
             String iconN = (String) icon.evaluate(XML, XPathConstants.STRING);
             
-            System.out.println(pressureN);
-            
             weather = new Weather(temperatureN,pressureN,iconN,humidityN,conditionN);
             
         } catch (XPathExpressionException ex) {

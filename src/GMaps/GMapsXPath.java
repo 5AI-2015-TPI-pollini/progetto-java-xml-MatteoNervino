@@ -37,6 +37,7 @@ public class GMapsXPath {
             NodeList latitudes = (NodeList) latitude.evaluate(XML, XPathConstants.NODESET);
             NodeList longitudes = (NodeList) longitude.evaluate(XML, XPathConstants.NODESET);
             
+            System.out.println(addresses.getLength() + " locations founded");
             for(int i=0;i<addresses.getLength();i++){
                 Coordinates coordinate = new Coordinates(latitudes.item(i).getNodeValue(), longitudes.item(i).getNodeValue());
                 locations.add(new Location(addresses.item(i).getNodeValue(), coordinate));

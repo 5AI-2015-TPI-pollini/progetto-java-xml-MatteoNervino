@@ -15,6 +15,14 @@ public class Weather {
         this.humidity = humidity;
         this.description = description;
     }
+    
+    public Weather(Weather w) {
+        this.temperature = w.temperature;
+        this.pressure = w.pressure;
+        this.icon = w.icon;
+        this.humidity = w.humidity;
+        this.description = w.description;
+    }
 
     public String getTemperature() {
         return temperature;

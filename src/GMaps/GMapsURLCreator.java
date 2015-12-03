@@ -23,7 +23,7 @@ public class GMapsURLCreator {
         
         try {
             URL = new URL(URLBuilder.toString());
-            System.out.println(URLBuilder.toString());
+            System.out.println("GMaps URL created: "+ URLBuilder.toString());
         } catch (MalformedURLException ex) {
             System.out.println("ERROR: Impossible create GoogleMaps URL");
         }
